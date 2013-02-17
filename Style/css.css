@@ -1,0 +1,50 @@
+﻿#MainBox {
+    border: 1px solid gray; /*Border around MainBox*/
+    width: 550px; /*Width of the MainBox*/
+    height: 400px; /*Height of the MainBox*/
+    margin-left: auto; /*Center Nav Bar from left*/
+    margin-right: auto; /*Center Nav Bar from right*/
+    background-color: rgba(51,51,51,1); /*BG of the MainBox*/
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0; /*Rounding only the Top right and left corners*/
+}
+
+#Nav {
+    width: 552px; /*Width of the Nav bar including compensation for total 2px of border on the sides of MainBox*/
+    height: 30px; /*Height of the Nav bar*/
+    margin-left: auto; /*Center Nav Bar from left*/
+    margin-right: auto; /*Center Nav Bar from right*/
+    background-color: gray; /*BG of Nav bar*/
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center; /*Align the children to center*/
+}
+
+#MainBox img {
+    margin-right: auto; /*Center image from right*/
+    margin-left: auto; /*Center image from left*/
+    width: 550px; /*Width Limit of images*/
+    height: 400px; /*Height limit of images*/
+    -webkit-border-radius: 9px 9px 0 0;
+    -moz-border-radius: 9px 9px 0 0;
+    border-radius: 9px 9px 0 0; /*Rounding of images*/
+}
+
+#button {
+    margin-left: 5px; /*Creates space between each button*/
+    margin-top: 7px; /*Creates space of buttons from top*/
+    width: 16px; /*Width of each button*/
+    height: 16px; /*Height of each button*/
+    cursor: pointer; /*Change to Link Pointer*/
+    background-color: white; /*Base color of each button*/
+    display: inline-block; /*Behaves like Inline element(<span>) and block element(<p>,<h>)*/
+    -webkit-box-shadow: inset 1px 0px 9px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 1px 0px 9px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 1px 0px 9px 0px rgba(0,0,0,0.2); /*Shadow Effect on buttons*/
+}
+
+.Highlight {
+    background-color: rgb(0, 148, 255) !important; /*This style will be overridden for #button background-color*/
+}

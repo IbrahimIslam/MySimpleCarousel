@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My Carousel</title>
+    <link type="text/css" rel="stylesheet" href="Style/css.css" />
+    <script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Save the collection of all the images in the MainBox Div
+            var imageCollection = $("#MainBox img");
+            //For all images in the collection
+            for (var i = 0; i < imageCollection.length; i++) {
+                //Insert buttons for each image
+                $("#Nav").append("<div id='button' index=" + i + "></div>");
+                //Hide all images except the first one
+                if (i > 0) {
+                    $(imageCollection[i]).css("display", "none");
+                }
+            }
+
+            //Highlight the first button at first
+            $("#Nav div").eq(0).addClass("Highlight");
+
+            //When the buttons are clicked 
+            $("#Nav div").click(function (e) {
+                //Remove all Highlighted
+                $("#Nav div").removeClass("Highlight");
+                //Highlight only the button clicked
+                $(this).addClass("Highlight");
+                //Hide all images
+                $(imageCollection).css("display", "none");
+                //Show image that match the index of button clicked
+                $(imageCollection[e.currentTarget.getAttribute('index')]).css("display", "inherit");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="MainBox">
+        <!-- Add image elements here -->
+        <img src="img1.jpg" />
+        <img src="img2.jpg" />
+        <img src="img3.jpg" />
+        <!-- ----------------------- -->
+    </div>
+    <div id="Nav">
+        <!-- This is where the buttons will be added-->
+    </div>
+</body>
+</html>
